@@ -1,0 +1,11 @@
+# ThorLog ESP-IDF Example Configuration
+
+# Use C++17 for inline variables
+CONFIG_COMPILER_CXX_EXCEPTIONS=n
+CONFIG_COMPILER_CXX_RTTI=n
+
+# Console output
+CONFIG_ESP_CONSOLE_UART_DEFAULT=y
+
+# Optimization
+CONFIG_COMPILER_OPTIMIZATION_SIZE=y
