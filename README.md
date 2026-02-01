@@ -174,6 +174,22 @@ Log.begin(LOG_LEVEL_INFO, &Serial);
 Log.begin(LOG_LEVEL_INFO, &EspIdfOutput);
 ```
 
+### Converting to Thorlog
+
+As Thorlog doesn't use/accept FlashStringHelpers, you will need to remove any `F()` macros you were previously using to wrap formatting strings.
+
+How you do this is very specific to your own programming style, but I found the following two search/replace strings very helpful in VSCode, when enabling case sensitivity and regex:
+
+Log strings without values:
+Search: `(Log\.[a-z]+\()F\(([^;%]+)\)\);`
+Replace: `$1$2);`
+
+Log strings with values:
+Search: `(Log\.[a-z]+\()F\(("[^"]+")\),`
+Replace: `$1$2,`
+
+
+
 ## History
 
 ThorLog is based on [ArduinoLog](https://github.com/thijse/Arduino-Log), originally created by Thijs Elenbaas and based on earlier work by Bernd Klein. It was rewritten to remove Arduino dependencies for use with ESP-IDF.
