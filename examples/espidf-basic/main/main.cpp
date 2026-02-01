@@ -27,7 +27,7 @@ void printTimestamp(ThorPrint* output, int logLevel) {
 
 extern "C" void app_main(void) {
     // Initialize logging with verbose level
-    Log.begin(LOG_LEVEL_VERBOSE, &EspIdfOutput);
+    Log.begin(THORLOG_LEVEL_VERBOSE, &EspIdfOutput);
 
     // Basic logging examples
     Log.noticeln("******************************************");
@@ -94,14 +94,14 @@ extern "C" void app_main(void) {
 
     // Demonstrate log level filtering
     Log.noticeln("Setting log level to WARNING...");
-    Log.setLevel(LOG_LEVEL_WARNING);
+    Log.setLevel(THORLOG_LEVEL_WARNING);
     Log.verboseln("This VERBOSE message will NOT appear");
     Log.infoln("This INFO message will NOT appear");
     Log.warningln("This WARNING message WILL appear");
     Log.errorln("This ERROR message WILL appear");
 
     // Reset to verbose
-    Log.setLevel(LOG_LEVEL_VERBOSE);
+    Log.setLevel(THORLOG_LEVEL_VERBOSE);
     Log.noticeln("Log level reset to VERBOSE");
 
     // Main loop
