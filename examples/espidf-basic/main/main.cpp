@@ -20,7 +20,7 @@
 // Example: Custom prefix function to add timestamps
 void printTimestamp(ThorPrint* output, int logLevel) {
     int64_t time_ms = esp_timer_get_time() / 1000;
-    char buffer[16];
+    char buffer[24];
     snprintf(buffer, sizeof(buffer), "[%7lld] ", (long long)time_ms);
     output->print(buffer);
 }
