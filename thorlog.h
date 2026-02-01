@@ -616,6 +616,7 @@ using Logging = ThorLogging;
 #define Log ThorLog
 
 // Map old log level names to new ones
+// ArduinoLog internal naming convention
 #define ARDUINO_LOG_LOG_LEVEL_SILENT  THORLOG_LEVEL_SILENT
 #define ARDUINO_LOG_LOG_LEVEL_FATAL   THORLOG_LEVEL_FATAL
 #define ARDUINO_LOG_LOG_LEVEL_ERROR   THORLOG_LEVEL_ERROR
@@ -624,6 +625,32 @@ using Logging = ThorLogging;
 #define ARDUINO_LOG_LOG_LEVEL_NOTICE  THORLOG_LEVEL_NOTICE
 #define ARDUINO_LOG_LOG_LEVEL_TRACE   THORLOG_LEVEL_TRACE
 #define ARDUINO_LOG_LOG_LEVEL_VERBOSE THORLOG_LEVEL_VERBOSE
+
+// Common ArduinoLog user-facing names (only if not already defined)
+#ifndef LOG_LEVEL_SILENT
+#define LOG_LEVEL_SILENT  THORLOG_LEVEL_SILENT
+#endif
+#ifndef LOG_LEVEL_FATAL
+#define LOG_LEVEL_FATAL   THORLOG_LEVEL_FATAL
+#endif
+#ifndef LOG_LEVEL_ERROR
+#define LOG_LEVEL_ERROR   THORLOG_LEVEL_ERROR
+#endif
+#ifndef LOG_LEVEL_WARNING
+#define LOG_LEVEL_WARNING THORLOG_LEVEL_WARNING
+#endif
+#ifndef LOG_LEVEL_INFO
+#define LOG_LEVEL_INFO    THORLOG_LEVEL_INFO
+#endif
+#ifndef LOG_LEVEL_NOTICE
+#define LOG_LEVEL_NOTICE  THORLOG_LEVEL_NOTICE
+#endif
+#ifndef LOG_LEVEL_TRACE
+#define LOG_LEVEL_TRACE   THORLOG_LEVEL_TRACE
+#endif
+#ifndef LOG_LEVEL_VERBOSE
+#define LOG_LEVEL_VERBOSE THORLOG_LEVEL_VERBOSE
+#endif
 
 // Map old macros
 #define CR THORLOG_CR
