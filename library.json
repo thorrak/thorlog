@@ -1,0 +1,19 @@
+{
+	"name": "ThorLog",
+	"keywords": "logging, debug, log, log levels, ESP32, ESP-IDF",
+	"description": "ThorLog is a minimalistic logging framework for ESP-IDF (no Arduino dependencies). Based on ArduinoLog by Thijs Elenbaas. ThorLog is designed so that log statements can remain in the code with minimal performance cost. The loglevel can be adjusted, and all logging code can be compiled out. Drop-in compatible with ArduinoLog API.",
+	"version": "1.0.0",
+	"authors": [
+		{
+			"name": "Thorrak",
+			"url": "https://github.com/thorrak"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/thorrak/thorlog"
+	},
+	"homepage": "https://github.com/thorrak/thorlog/",
+	"frameworks": ["espidf", "arduino"],
+	"platforms": ["espressif32"]
+}
